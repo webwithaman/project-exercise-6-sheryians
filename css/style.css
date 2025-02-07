@@ -1,7 +1,7 @@
 /**********************************************************
   Add Google Fonts
 **********************************************************/
-@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Nunito:wght@300;400;500;600;700&family=Oswald:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700;800&family=Roboto:wght@300;400;500;700&family=Ubuntu:wght@300;400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
 
 /**********************************************************
   Reset Default Properties Start
@@ -12,6 +12,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  word-wrap: break-word;
 }
 
 html {
@@ -19,11 +20,15 @@ html {
   /* Now 1rem = 1em = 10px */
 
   overflow-x: hidden;
-  scroll-behavior: smooth;
+  width: 100%;
+  height: 100%;
 }
 
 body {
   overflow-x: hidden;
+  width: 100%;
+  height: 100%;
+  font-family: "Poppins", sans-serif;
 }
 
 /**********************************************************
@@ -31,61 +36,12 @@ body {
 **********************************************************/
 
 /**********************************************************
-  Variables Start
-**********************************************************/
-:root {
-  /* Theme Colors */
-  --black: #000;
-  --white: #fff;
-
-  /* Theme Fonts */
-  --font-family-1: "Lato", sans-serif;
-  --font-family-2: "Poppins", sans-serif;
-  --font-family-3: "Oswald", sans-serif;
-  --font-family-4: "Ubuntu", sans-serif;
-  --font-family-5: "Roboto", sans-serif;
-  --font-family-6: "Nunito", sans-serif;
-  --font-family-7: "Gideon", sans-serif;
-}
-
-/**********************************************************
-  Variables End
-**********************************************************/
-
-/**********************************************************
   Common Properties to Frequently Used Elements Start
 **********************************************************/
 
-a {
-  text-decoration: none;
-  display: inline-block;
-  font-family: var(--font-family-2);
-  transition: all 0.3s linear;
-}
-
-li {
-  list-style-type: none;
-  font-family: var(--font-family-2);
-}
-
-button {
-  border: none;
-  background-color: transparent;
-  cursor: pointer;
-  font-size: 1.5rem;
-  font-weight: 500;
-  letter-spacing: 1px;
-  font-family: var(--font-family-2);
-  transition: all 0.3s linear;
-}
-
-input,
-textarea {
-  outline: none;
-}
-
 img {
   max-width: 100%;
+  height: auto;
   width: 100%;
   display: inline-block;
   object-fit: cover;
@@ -97,25 +53,17 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: var(--font-family-1);
+  font-family: var(--font-family-2);
   line-height: 1.4;
 }
 
 p {
   font-family: var(--font-family-2);
-  line-height: 1.6;
+  line-height: 1.5;
 }
 
 /**********************************************************
   Common Properties to Frequently Used Elements End
-**********************************************************/
-
-/**********************************************************
-  Frequently Used Components In This Website Start
-**********************************************************/
-
-/**********************************************************
-Frequently Used Components In This Website End
 **********************************************************/
 
 /***********************************************************************************************
@@ -126,20 +74,95 @@ Frequently Used Components In This Website End
   Wrapper Start
 **********************************************************/
 .wrapper {
-  width: 100vw;
-  height: 2000px;
+  width: 100%;
+  background-color: #f1f3f6;
 }
 
 /**********************************************************
-  Keyframes For Animations Start
+  nav start
 **********************************************************/
-@keyframes animation-name {
+nav {
+  background-color: #009df8;
+  color: white;
+  text-align: center;
+  padding: 2rem;
+  text-transform: capitalize;
+}
+
+nav h1 {
+  font-size: 3.2rem;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+nav h6 {
+  font-size: 1.5rem;
+  font-weight: 500;
 }
 
 /**********************************************************
-  Keyframes For Animations End
+  products-container start
 **********************************************************/
+.products-conatiner {
+  margin: 4rem auto;
+  width: 80%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-gap: 3rem;
+}
 
-/***********************************************************************************************
-  Actual Document Styling End
-***********************************************************************************************/
+.product-box {
+  background-color: #fff;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  padding: 2rem;
+}
+
+.product-img-box {
+  overflow: hidden;
+}
+
+.product-box img {
+  transition: all 0.3s ease-out;
+}
+
+.product-box:hover img {
+  transform: scale(1.1);
+}
+
+.product-details {
+  padding-top: 2rem;
+}
+
+.product-details h3 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.product-details p {
+  font-size: 1.3rem;
+  color: grey;
+  margin-block: 0.5rem 1rem;
+}
+
+.product-details span {
+  font-family: var(--font-family-2);
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: rgb(0, 0, 0);
+  display: inline-block;
+  padding: 0.5rem 0.8rem;
+  background-color: #dcdde17b;
+}
+
+/**********************************************************
+  footer start
+**********************************************************/
+footer {
+  padding: 2rem;
+  background-color: #172337;
+  color: #fff;
+  text-align: center;
+  font-size: 1.4rem;
+}

@@ -2,7 +2,39 @@
   Media Queries Start
 **********************************************************/
 
-@media only screen and (max-width: 1200px) {
+@media only screen and (min-width: 1600px) {
+  html {
+    font-size: 75%;
+  }
+}
+
+@media only screen and (min-width: 1900px) {
+  html {
+    font-size: 90%;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .products-conatiner {
+    width: 100%;
+    padding-inline: 2rem;
+  }
+}
+
+@media only screen and (max-width: 300px) {
+  html {
+    font-size: 50%;
+  }
+
+  .products-conatiner {
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  }
+}
+
+@media only screen and (max-width: 200px) {
+  html {
+    font-size: 20%;
+  }
 }
 
 /**********************************************************
